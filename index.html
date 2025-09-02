@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sheCircuits – Empowering Girls in Tech</title>
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{
+      /* Pink-forward palette */
+      --sc-pink: #ec4899;      /* pink-500 */
+      --sc-rose: #f43f5e;      /* rose-500 */
+      --sc-fuchsia: #a21caf;   /* fuchsia-700 */
+      --sc-bg: #fff0f6;        /* very light pink */
+      --sc-dark: #0b0b12;
+      --radius: 1.2rem;
+    }
+    body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background: var(--sc-bg); }
+    .navbar-brand span.gradient { background: linear-gradient(90deg,var(--sc-pink), var(--sc-rose), var(--sc-fuchsia)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .btn-gradient{ --bs-btn-color:#fff; --bs-btn-bg: var(--sc-pink); --bs-btn-border-color: transparent; background: linear-gradient(90deg,var(--sc-pink),var(--sc-fuchsia)); box-shadow:0 10px 30px -10px rgba(236,72,153,.6); border:none; }
+    .btn-gradient:hover{ filter: brightness(1.05); }
+    .glass{ background: rgba(255,255,255,.7); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.6); border-radius: var(--radius); }
+    .soft-card{ background: #fff; border: 1px solid rgba(236,72,153,.25); border-radius: var(--radius); box-shadow:0 10px 30px -16px rgba(236,72,153,.4); }
+    .icon-pill{ display:inline-flex; width:44px; height:44px; align-items:center; justify-content:center; border-radius:12px; color:#fff; background: linear-gradient(135deg,var(--sc-pink),var(--sc-rose)); }
+    .section-title{ font-weight:800; }
+    .hero-bg{ position:relative; }
+    .hero-bg:before{ content:""; position:absolute; inset:-40px 0 0 0; background: radial-gradient(ellipse at top, rgba(236,72,153,.20), transparent 60%); pointer-events:none; }
+    .stat{ border-radius: 20px; border:1px solid rgba(255,255,255,.6); background: rgba(255,255,255,.8); }
+    .badge-soft{ background: rgba(236,72,153,.12); color: var(--sc-fuchsia); border:1px solid rgba(236,72,153,.25); }
+    .apply-gradient{ background: linear-gradient(135deg,var(--sc-rose),var(--sc-fuchsia)); }
+    .apply-gradient input.form-control{ background: rgba(255,255,255,.95); }
+    .faq .accordion-button:not(.collapsed){ color: var(--sc-fuchsia); background: rgba(236,72,153,.08); }
+    .rounded-xxl{ border-radius: 2rem; }
+    .underline-pink{ text-decoration: underline; text-decoration-color: var(--sc-pink); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+    .hover-lift{ transition: transform .25s ease, box-shadow .25s ease; }
+    .hover-lift:hover{ transform: translateY(-4px); box-shadow:0 12px 30px -12px rgba(236,72,153,.45); }
+    @media (min-width: 992px){ .hero-min-h { min-height: 76vh; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        she<span class="gradient">Circuits</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#curriculum">Curriculum</a></li>
+          <li class="nav-item"><a class="nav-link" href="#benefits">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#apply" class="btn btn-gradient ms-lg-3">Apply Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg py-5 py-lg-0">
+    <div class="container hero-min-h d-flex align-items-center">
+      <div class="row g-5 align-items-center w-100">
+        <div class="col-lg-6">
+          <span class="badge badge-soft rounded-pill">Girls in Tech • Embedded • Robotics • Coding</span>
+          <h1 class="display-4 fw-extrabold mt-3">
+            Empowering girls to build the future with
+            <span class="d-block gradient" style="background:linear-gradient(90deg,var(--sc-pink),var(--sc-rose),var(--sc-fuchsia)); -webkit-background-clip:text; color:transparent;">tech superpowers</span>
+          </h1>
+          <p class="lead mt-3 text-secondary">sheCircuits is a hands‑on program where girls learn embedded systems, robotics, and software development—guided by mentors, inspired by community, and powered by creativity.</p>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <a href="#apply" class="btn btn-gradient btn-lg"><i class="bi bi-lightning-charge me-2"></i>Get Started</a>
+            <a href="#video" class="btn btn-outline-dark btn-lg"><i class="bi bi-play-circle me-2"></i>Watch Intro</a>
+          </div>
+          <div class="row row-cols-3 g-3 mt-4">
+            <div class="col"><div class="stat p-3 text-center"><div class="fw-bold fs-4 text-danger">1,200+</div><div class="small text-secondary">Learners</div></div></div>
+            <div class="col"><div class="stat p-3 text-center"><div class="fw-bold fs-4 text-danger">350+</div><div class="small text-secondary">Projects</div></div></div>
+            <div class="col"><div class="stat p-3 text-center"><div class="fw-bold fs-4 text-danger">80+</div><div class="small text-secondary">Mentors</div></div></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="soft-card p-4 p-lg-5">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="glass p-3 h-100">
+                  <div class="icon-pill mb-2"><i class="bi bi-cpu"></i></div>
+                  <h6 class="mb-1">Embedded Systems</h6>
+                  <p class="small text-secondary mb-0">Arduino, sensors, microcontrollers, circuits</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="glass p-3 h-100">
+                  <div class="icon-pill mb-2"><i class="bi bi-robot"></i></div>
+                  <h6 class="mb-1">Robotics</h6>
+                  <p class="small text-secondary mb-0">Mechanisms, control, autonomy & hardware</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="glass p-3 h-100">
+                  <div class="icon-pill mb-2"><i class="bi bi-code-slash"></i></div>
+                  <h6 class="mb-1">Coding</h6>
+                  <p class="small text-secondary mb-0">Python, web, apps & problem solving</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="glass p-3 h-100">
+                  <div class="icon-pill mb-2"><i class="bi bi-motherboard"></i></div>
+                  <h6 class="mb-1">Electronics</h6>
+                  <p class="small text-secondary mb-0">Soldering, PCB basics & safety</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3 px-2 py-2 border rounded-3">
+              <div class="small text-secondary"><i class="bi bi-shield-check text-danger me-2"></i>Safe & inclusive • Beginner‑friendly • Project‑based</div>
+              <i class="bi bi-chevron-right text-danger d-none d-sm-inline"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROGRAMS -->
+  <section id="programs" class="py-5">
+    <div class="container text-center">
+      <h2 class="section-title h1">Choose your <span class="underline-pink">path</span></h2>
+      <p class="text-secondary">Tracks that mix hardware, software, and creativity.</p>
+      <div class="row g-4 mt-2">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="soft-card p-4 h-100 hover-lift">
+            <div class="icon-pill mb-3"><i class="bi bi-cpu"></i></div>
+            <h5>Embedded Systems</h5>
+            <ul class="list-unstyled small text-secondary mt-3 mb-0">
+              <li>Arduino / ESP32</li>
+              <li>Sensors & IO</li>
+              <li>C coding basics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="soft-card p-4 h-100 hover-lift">
+            <div class="icon-pill mb-3"><i class="bi bi-robot"></i></div>
+            <h5>Robotics</h5>
+            <ul class="list-unstyled small text-secondary mt-3 mb-0">
+              <li>Line followers</li>
+              <li>Arm & gripper</li>
+              <li>Autonomy 101</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="soft-card p-4 h-100 hover-lift">
+            <div class="icon-pill mb-3"><i class="bi bi-code-slash"></i></div>
+            <h5>Coding</h5>
+            <ul class="list-unstyled small text-secondary mt-3 mb-0">
+              <li>Python fundamentals</li>
+              <li>Web apps</li>
+              <li>Algorithms</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="soft-card p-4 h-100 hover-lift">
+            <div class="icon-pill mb-3"><i class="bi bi-motherboard"></i></div>
+            <h5>Electronics</h5>
+            <ul class="list-unstyled small text-secondary mt-3 mb-0">
+              <li>Soldering</li>
+              <li>Safety</li>
+              <li>PCB basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section id="curriculum" class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title h1">Hands‑on, step‑by‑step</h2>
+        <p class="text-secondary">A modern curriculum designed for real projects.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-lg-3">
+          <div class="soft-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="mb-0 fw-bold">Week 1</h6>
+              <span class="badge badge-soft">Core</span>
+            </div>
+            <div class="small text-secondary">Foundations</div>
+            <ul class="small mt-3 mb-0 ps-3">
+              <li>Safety & kits</li>
+              <li>Intro to coding</li>
+              <li>Blink & sensors</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="soft-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="mb-0 fw-bold">Week 2</h6>
+              <span class="badge badge-soft">Core</span>
+            </div>
+            <div class="small text-secondary">Build</div>
+            <ul class="small mt-3 mb-0 ps-3">
+              <li>Mechanisms</li>
+              <li>Inputs/outputs</li>
+              <li>Solder lab</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="soft-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="mb-0 fw-bold">Week 3</h6>
+              <span class="badge badge-soft">Core</span>
+            </div>
+            <div class="small text-secondary">Code + Control</div>
+            <ul class="small mt-3 mb-0 ps-3">
+              <li>PID basics</li>
+              <li>APIs & web</li>
+              <li>Mobile UI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="soft-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="mb-0 fw-bold">Week 4</h6>
+              <span class="badge text-bg-dark">Showcase</span>
+            </div>
+            <div class="small text-secondary">Project & Demo Day</div>
+            <ul class="small mt-3 mb-0 ps-3">
+              <li>Polish & test</li>
+              <li>Docs & pitch</li>
+              <li>Showcase!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS / METRICS -->
+  <section id="benefits" class="py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title h1">Why sheCircuits?</h2>
+          <p class="text-secondary">A learning community that blends mentorship, real hardware, and software—so every girl can see herself as a builder and leader.</p>
+          <ul class="list-unstyled mt-4">
+            <li class="d-flex gap-3 align-items-start mb-3"><span class="icon-pill"><i class="bi bi-rocket-takeoff"></i></span><div><div class="fw-semibold">Project‑first learning</div><div class="small text-secondary">Build real things from week one.</div></div></li>
+            <li class="d-flex gap-3 align-items-start mb-3"><span class="icon-pill"><i class="bi bi-people"></i></span><div><div class="fw-semibold">Mentor network</div><div class="small text-secondary">Guidance from engineers & educators.</div></div></li>
+            <li class="d-flex gap-3 align-items-start mb-3"><span class="icon-pill"><i class="bi bi-mortarboard"></i></span><div><div class="fw-semibold">Pathways</div><div class="small text-secondary">From beginner to advanced competitions.</div></div></li>
+            <li class="d-flex gap-3 align-items-start"><span class="icon-pill"><i class="bi bi-award"></i></span><div><div class="fw-semibold">Certs & badges</div><div class="small text-secondary">Celebrate progress with recognitions.</div></div></li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="soft-card p-4">
+            <div class="row g-3">
+              <div class="col-6 col-md-3"><div class="glass p-3 text-center h-100"><div class="fs-4 fw-bold text-danger">24+</div><div class="small">Code Labs</div></div></div>
+              <div class="col-6 col-md-3"><div class="glass p-3 text-center h-100"><div class="fs-4 fw-bold text-danger">300+</div><div class="small">Embedded Kits</div></div></div>
+              <div class="col-6 col-md-3"><div class="glass p-3 text-center h-100"><div class="fs-4 fw-bold text-danger">150+</div><div class="small">Robots Built</div></div></div>
+              <div class="col-6 col-md-3"><div class="glass p-3 text-center h-100"><div class="fs-4 fw-bold text-danger">100%</div><div class="small">Safety Hours</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY / NEWSLETTER -->
+  <section id="apply" class="py-5 text-white apply-gradient">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="display-6 fw-bold">Join the next cohort</h2>
+          <p class="mb-4 text-white-75">Applications open now. Limited seats to keep workshops hands‑on and personal.</p>
+          <form class="row g-2" id="applyForm">
+            <div class="col-sm-8">
+              <label class="visually-hidden" for="email">Email</label>
+              <input id="email" name="email" type="email" required class="form-control form-control-lg" placeholder="Your email" />
+            </div>
+            <div class="col-sm-4 d-grid">
+              <button class="btn btn-dark btn-lg" type="submit">Apply / Subscribe</button>
+            </div>
+          </form>
+          <small class="d-block mt-2 text-white-75">We’ll send application steps and scholarship info.</small>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-12 col-sm-4"><div class="glass p-3 h-100 text-white"><i class="bi bi-hand-thumbs-up"></i><div class="fw-semibold mt-2">Scholarships</div><div class="small">We remove barriers so talent can shine.</div></div></div>
+            <div class="col-12 col-sm-4"><div class="glass p-3 h-100 text-white"><i class="bi bi-shield-check"></i><div class="fw-semibold mt-2">Safe Space</div><div class="small">We remove barriers so talent can shine.</div></div></div>
+            <div class="col-12 col-sm-4"><div class="glass p-3 h-100 text-white"><i class="bi bi-rocket"></i><div class="fw-semibold mt-2">Demo Day</div><div class="small">We remove barriers so talent can shine.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5 faq">
+    <div class="container">
+      <h2 class="section-title h1 text-center mb-4">FAQ</h2>
+      <div class="accordion" id="faqAccord">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1h"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">Who can join?</button></h2>
+          <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccord"><div class="accordion-body">Girls (ages 10–18) with curiosity! No prior experience required—just enthusiasm.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">Do I need my own laptop or hardware?</button></h2>
+          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccord"><div class="accordion-body">We provide kits during workshops. A shared laptop is okay; we also arrange loaners where needed.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Is there financial aid?</button></h2>
+          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccord"><div class="accordion-body">Yes—need‑based scholarships and full sponsorships from our partners.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 bg-white border-top">
+    <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fw-bold">she<span style="color:var(--sc-pink)">Circuits</span></span>
+        <small class="text-secondary">© <span id="year"></span> All rights reserved.</small>
+      </div>
+      <div class="d-flex gap-3 fs-5">
+        <a class="text-decoration-none text-dark" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a class="text-decoration-none text-dark" href="#" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a class="text-decoration-none text-dark" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a class="text-decoration-none text-dark" href="mailto:hello@shecircuits.org" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Smooth scroll for in‑page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+    // Newsletter / Apply form demo handler
+    const form=document.getElementById('applyForm');
+    form.addEventListener('submit', e=>{ e.preventDefault(); const email=document.getElementById('email').value.trim(); if(email){ alert(`Thanks! We'll reach out at ${email}.`); form.reset(); } });
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

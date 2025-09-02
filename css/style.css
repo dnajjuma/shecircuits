@@ -1,248 +1,158 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    background-color: #f8e5f4;
+:root {
+    /* Cohorts-like soft creme base + pink accents */
+    --sc-creme: #f6e9fc;
+    /* soft warm background */
+    --sc-cream-2: #ffeefe;
+    --sc-text: #141216;
+    --sc-muted: #6c6a6f;
+    --sc-pink: #ff66c4;
+    /* vibrant pink */
+    --sc-yellow: #f5b700;
+    /* accent dot */
+    --sc-orange: #ff7a1a;
+    /* secondary */
+    --sc-deep: #0e0a12;
+    --radius: 18px;
 }
 
-.hero-banner {
-    background: url('../images/westride_run.png') no-repeat center center/cover;
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+html,
+body {
+    background: var(--sc-creme);
+    color: var(--sc-text);
 }
 
-.hero-section {
-  height: 60vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: #f8f9fa; /* Optional subtle background */
-  overflow: hidden;
+body {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial;
 }
 
-
-
-.middle-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1040; /* higher than navbar to ensure it stays on top */
-    background-color: white;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+.brand {
+    font-weight: 800;
+    letter-spacing: .2px;
 }
 
-.card {
-    border-radius: 12px;
-    /* opacity: 0.9; */
-}
-
-
-.hero-banner h1 {
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-.btn-gradient {
-    background: linear-gradient(90deg, #d152fd, #1bffc1);
-    border: none;
-    color: white;
-    transition: background 0.3s ease;
-}
-
-.btn-gradient:hover {
-    opacity: 0.9;
-}
-
-
-.hero-banner .btn {
-    /* background-color: #00f7ff; */
-    color: black;
-    border: none;
-    /* font-weight: bold; */
-}
-
-.middle-nav {
-    background-color: #f9f9f9;
-    padding: 10px 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.hero-section {
-    color: #ffffff;
-    position: relative;
-    background-color: #d89699;
-    overflow: hidden;
-}
-
-.background-word {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    font-size: 20vw;
-    opacity: 0.1;
-    color: #fff;
-    font-weight: 900;
-    z-index: 1;
-    user-select: none;
-    pointer-events: none;
-    white-space: nowrap;
-}
-
-/* 
-.gradient-text {
-    background: linear-gradient(90deg, #837f84, #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.brand .dot {
+    width: 14px;
+    height: 14px;
     display: inline-block;
-} */
-
-.hollow-text {
-    color: transparent;
-    -webkit-text-stroke: 1px #fff; /* Adjust thickness and color */
-    font-weight: bold;
+    background: linear-gradient(135deg, var(--sc-pink), var(--sc-orange));
+    border-radius: 50%;
+    margin-right: .35rem;
+    box-shadow: 0 4px 18px rgba(255, 59, 141, .35);
 }
 
+.brand .name {
+    vertical-align: middle;
+}
 
+.btn-pill {
+    border-radius: 999px;
+    padding: .8rem 1.3rem;
+    font-weight: 700;
+}
 
-.hero-section .container-fluid {
+.btn-brand {
+    color: #1a1a1a;
+    background: var(--sc-yellow);
+    border: none;
+    box-shadow: 0 10px 22px -10px rgba(245, 183, 0, .7);
+}
+
+.btn-brand:hover {
+    filter: brightness(1.05);
+}
+
+.btn-outline-dark {
+    border-radius: 999px;
+}
+
+.hero {
+    background: radial-gradient(1200px 400px at -10% 0%, rgba(255, 58, 141, .08), transparent 60%),
+        radial-gradient(1200px 400px at 110% 20%, rgba(255, 122, 26, .06), transparent 60%);
     position: relative;
-    z-index: 2;
 }
 
-.btn-outline-black {
-    background-color: white;
-    /* or transparent if you want */
-    border: 2px solid black;
-    color: black;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.badge-soft {
+    background: rgba(255, 59, 141, .12);
+    color: #b01259;
+    border: 1px solid rgba(255, 59, 141, .3);
+    border-radius: 999px;
+    font-weight: 700;
 }
 
-.btn-outline-black:hover {
-    background-color: black;
-    color: white;
+.headline {
+    font-weight: 800;
+    letter-spacing: -.02em;
 }
 
-.btn-outline-black img {
-    filter: none;
-    /* ensures the image stays visible */
+.headline .accent {
+    color: var(--sc-pink);
+    position: relative;
 }
 
-.footer-link {
-    color: #bbb;
-    text-decoration: none;
+.accent-dot {
+    display: inline-block;
+    width: .6em;
+    height: .6em;
+    background: var(--sc-pink);
+    border-radius: 50%;
+    margin-left: .15em;
+    vertical-align: middle;
+    box-shadow: 0 8px 20px rgba(255, 59, 141, .45);
 }
 
-.footer-link:hover {
-    color: #fff;
+.card-soft {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: var(--radius);
+}
+
+.perk {
+    border-radius: var(--radius);
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.section-muted {
+    background: var(--sc-cream-2);
+}
+
+.underline-pink {
     text-decoration: underline;
+    text-decoration-color: var(--sc-pink);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
 }
 
-.footer-icon {
-    filter: none;
-    /* removes the white-invert filter */
-    transition: opacity 0.3s ease;
+.avatar-bubble {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    background: #fff;
+    border-radius: 999px;
+    padding: .65rem 1rem;
+    border: 1px solid rgba(0, 0, 0, .06);
+    box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .25);
 }
 
-.footer-icon:hover {
-    opacity: 0.7;
+.icon-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--sc-pink), var(--sc-orange));
 }
 
-
-
-.footer-icon {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 1;
+.footer {
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, .06);
 }
 
-.footer-icon:hover {
-    transform: scale(1.2);
-    opacity: 0.7;
-}
-
-/* Optional: style for Font Awesome icons */
-.fa-brands {
-    font-size: 24px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    cursor: pointer;
-}
-
-.fa-brands:hover {
-    transform: scale(1.2);
-    opacity: 0.7;
-}
-
-.carousel-item h3 {
-  font-size: 1.8rem;
-  color: #111;
-}
-
-.carousel-item p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-  .activity-card {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.activity-card:hover {
-  transform: scale(1.05);
-}
-
-
-
-
-@media (max-width: 768px) {
-    .background-word {
-        font-size: 50vw;
-        top: 30%;
-    }
-}
-
-
-/* Responsive typography */
-@media (max-width: 768px) {
-    .hero-banner h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-banner h1 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .hero-banner {
-        background-attachment: fixed;
-    }
-}
-
-@media (max-width: 576px) {
-    footer .row>div {
-        text-align: center;
-    }
-
-    footer .d-flex {
-        justify-content: center !important;
-    }
-
-    footer .d-flex.flex-column.flex-md-row {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center;
-    }
-
-    footer .footer-link {
-        display: inline-block;
-        margin-bottom: 0.5rem;
+@media (min-width: 992px) {
+    .hero-min {
+        min-height: 74vh;
     }
 }

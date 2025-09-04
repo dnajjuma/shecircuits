@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>sheCircuits — Robotics, Coding & IoT for Girls in Africa</title>
-  <meta name="description" content="sheCircuits empowers girls and young women in Africa with hands-on robotics, coding, and IoT—small mentor-led cohorts, real projects, and an inclusive community." />
+  <meta name="description"
+    content="sheCircuits empowers girls and young women in Africa with hands-on robotics, coding, and IoT—small mentor-led cohorts, real projects, and an inclusive community." />
   <link rel="canonical" href="https://shecircuits.org/" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#ff66c4" />
@@ -15,19 +16,23 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shecircuits.org/" />
   <meta property="og:title" content="sheCircuits — Robotics, Coding & IoT for Girls" />
-  <meta property="og:description" content="Mentor-led cohorts, real hardware + software projects, and a safe space to shine." />
+  <meta property="og:description"
+    content="Mentor-led cohorts, real hardware + software projects, and a safe space to shine." />
   <meta property="og:image" content="https://shecircuits.org/images/3.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="sheCircuits — Robotics, Coding & IoT for Girls" />
-  <meta name="twitter:description" content="Mentor-led cohorts, real hardware + software projects, and a safe space to shine." />
+  <meta name="twitter:description"
+    content="Mentor-led cohorts, real hardware + software projects, and a safe space to shine." />
   <meta name="twitter:image" content="https://shecircuits.org/images/6.png" />
 
   <!-- Preconnect for faster fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -78,60 +83,278 @@
   </script>
 
   <style>
-    :root{
+    :root {
       --sc-creme: #f6e9fc;
-      --sc-cream-2:#ffeefe;
+      --sc-cream-2: #f6e9fc;
       --sc-text: #141216;
-      --sc-muted:#6c6a6f;
-      --sc-pink:#ff66c4;
-      --sc-yellow:#f5b700;
-      --sc-orange:#ff7a1a;
-      --sc-deep:#0e0a12;
+      --sc-muted: #6c6a6f;
+      --sc-pink: #ff66c4;
+      --sc-yellow: #f5b700;
+      --sc-orange: #ff7a1a;
+      --sc-deep: #0e0a12;
       --radius: 18px;
     }
-    html,body{ background: var(--sc-creme); color: var(--sc-text); scroll-behavior:smooth; }
-    body{ font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial; }
-    .brand{ font-weight:800; letter-spacing:.2px; }
-    .brand .dot{ width:14px; height:14px; display:inline-block; background:linear-gradient(135deg,var(--sc-pink),var(--sc-orange)); border-radius:50%; margin-right:.35rem; box-shadow:0 4px 18px rgba(255,59,141,.35); }
-    .brand .name{ vertical-align:middle; }
 
-    .btn-pill{ border-radius:999px; padding:.8rem 1.3rem; font-weight:700; }
-    .btn-brand{ color:#1a1a1a; background: var(--sc-yellow); border:none; box-shadow:0 10px 22px -10px rgba(245,183,0,.7); }
-    .btn-brand:hover{ filter:brightness(1.05); }
-    .btn-outline-dark{ border-radius:999px; }
+    html,
+    body {
+      background: var(--sc-creme);
+      color: var(--sc-text);
+      scroll-behavior: smooth;
+    }
 
-    .navbar.is-sticky{ position: sticky; top:0; z-index:999; backdrop-filter: blur(6px); background:rgba(255,255,255,.55)!important; border-bottom:1px solid rgba(0,0,0,.06); }
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial;
+    }
 
-    .hero{ background: radial-gradient(1200px 400px at -10% 0%, rgba(255,58,141,.08), transparent 60%),
-                               radial-gradient(1200px 400px at 110% 20%, rgba(255,122,26,.06), transparent 60%);
-            position:relative; }
-    .badge-soft{ background: rgba(255,59,141,.12); color:#b01259; border:1px solid rgba(255,59,141,.3); border-radius:999px; font-weight:700; }
+    .brand {
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
 
-    .headline{ font-weight:800; letter-spacing:-.02em; }
-    .headline .accent{ color: var(--sc-pink); position:relative; }
-    .accent-dot{ display:inline-block; width:.6em; height:.6em; background:var(--sc-pink); border-radius:50%; margin-left:.15em; vertical-align:middle; box-shadow:0 8px 20px rgba(255,59,141,.45); }
+    .brand .dot {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background: linear-gradient(135deg, var(--sc-pink), var(--sc-orange));
+      border-radius: 50%;
+      margin-right: .35rem;
+      box-shadow: 0 4px 18px rgba(255, 59, 141, .35);
+    }
 
-    .card-soft{ background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); }
-    .perk{ border-radius:var(--radius); padding:1rem; background:#fff; border:1px solid rgba(0,0,0,.05); }
+    .brand .name {
+      vertical-align: middle;
+    }
 
-    .section-muted{ background: var(--sc-cream-2); }
-    .underline-pink{ text-decoration: underline; text-decoration-color: var(--sc-pink); text-decoration-thickness: 4px; text-underline-offset: 8px; }
+    .btn-pill {
+      border-radius: 999px;
+      padding: .8rem 1.3rem;
+      font-weight: 700;
+    }
 
-    .avatar-bubble{ position:absolute; right:0; bottom:-20px; background:#fff; border-radius:999px; padding:.65rem 1rem; border:1px solid rgba(0,0,0,.06); box-shadow:0 12px 24px -12px rgba(0,0,0,.25); }
+    .btn-brand {
+      color: #1a1a1a;
+      background: var(--sc-yellow);
+      border: none;
+      box-shadow: 0 10px 22px -10px rgba(245, 183, 0, .7);
+    }
 
-    .icon-pill{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:12px; color:#fff; background:linear-gradient(135deg,var(--sc-pink),var(--sc-orange)); }
+    .btn-brand:hover {
+      filter: brightness(1.05);
+    }
 
-    .footer{ background:#fff; border-top:1px solid rgba(0,0,0,.06); }
+    .btn-outline-dark {
+      border-radius: 999px;
+    }
 
-    .nav-link.active{ color:#000!important; font-weight:700; }
+    .navbar.is-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, .55) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, .06);
+    }
 
-    .ratio-16x9{ border-radius: var(--radius); overflow:hidden; }
+    .hero {
+      background: radial-gradient(1200px 400px at -10% 0%, rgba(255, 58, 141, .08), transparent 60%),
+        radial-gradient(1200px 400px at 110% 20%, rgba(255, 122, 26, .06), transparent 60%);
+      position: relative;
+    }
 
-    @media (min-width: 992px){ .hero-min{ min-height:74vh; } }
+    /* put in your <style> */
+    .hero-title {
+      font-size: clamp(26px, 6vw, 50px);
+    }
+
+    /* ~26px on phones → 50px on desktop */
+
+
+    .badge-soft {
+      background: rgba(255, 59, 141, .12);
+      color: #b01259;
+      border: 1px solid rgba(255, 59, 141, .3);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .headline {
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .headline .accent {
+      color: var(--sc-pink);
+      position: relative;
+    }
+
+    .accent-dot {
+      display: inline-block;
+      width: .6em;
+      height: .6em;
+      background: var(--sc-pink);
+      border-radius: 50%;
+      margin-left: .15em;
+      vertical-align: middle;
+      box-shadow: 0 8px 20px rgba(255, 59, 141, .45);
+    }
+
+    .card-soft {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: var(--radius);
+    }
+
+    .perk {
+      border-radius: var(--radius);
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    .section-muted {
+      background: var(--sc-cream-2);
+    }
+
+    .underline-pink {
+      text-decoration: underline;
+      text-decoration-color: var(--sc-pink);
+      text-decoration-thickness: 4px;
+      text-underline-offset: 8px;
+    }
+
+    .avatar-bubble {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      background: #fff;
+      border-radius: 999px;
+      padding: .65rem 1rem;
+      border: 1px solid rgba(0, 0, 0, .06);
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .25);
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--sc-pink), var(--sc-orange));
+    }
+
+    .footer {
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, .06);
+    }
+
+    .nav-link.active {
+      color: #000 !important;
+      font-weight: 700;
+    }
+
+    .ratio-16x9 {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* ===== Ticker ===== */
+    .ticker {
+      --h: 64px;
+      --speed: 22s;
+      /* adjust to change speed */
+      background: #b3069c;
+      overflow: hidden;
+      height: var(--h);
+      position: relative;
+      border-top: 1px solid rgba(0, 0, 0, .06);
+      border-bottom: 1px solid rgba(0, 0, 0, .06);
+    }
+
+    .ticker__track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 3rem;
+      white-space: nowrap;
+      will-change: transform;
+      animation: ticker-scroll var(--speed) linear infinite;
+    }
+
+    .ticker__item {
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: #fff;
+      /* muted */
+    }
+
+    .ticker__dot {
+      width: .5rem;
+      height: .5rem;
+      border-radius: 999px;
+      display: inline-block;
+      margin: 0 .75rem;
+      background: linear-gradient(135deg, var(--sc-pink), var(--sc-orange));
+      box-shadow: 0 6px 14px rgba(255, 59, 141, .35);
+    }
+
+    /* pause on hover/focus */
+    .ticker:hover .ticker__track,
+    .ticker:focus-within .ticker__track {
+      animation-play-state: paused;
+    }
+
+    /* motion-safe */
+    @keyframes ticker-scroll {
+      0% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker__track {
+        animation: none;
+      }
+    }
+
+    /* optional: soft fade edges */
+    .ticker::before,
+    .ticker::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .ticker::before {
+      left: 0;
+      background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+    }
+
+    .ticker::after {
+      right: 0;
+      background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+    }
+
+
+    @media (min-width: 992px) {
+      .hero-min {
+        min-height: 74vh;
+      }
+    }
   </style>
   <!-- Slider styles (SwiperJS) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-transparent py-2 is-sticky" aria-label="Main navigation">
@@ -140,7 +363,9 @@
         <img src="images/7.png" alt="" style="width: 40px;">
         <img src="images/shecircuits__1_-removebg-preview.png" alt="" style="width: 130px;">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
@@ -160,38 +385,60 @@
       <div class="row align-items-center g-5 w-100">
         <div class="col-lg-6">
           <span class="badge badge-soft px-3 py-2">Rewire Your Future</span>
-          <h1 class="h1 fw-extrabold mt-3 mb-4">Hands-on robotics for <span class="accent">African</span> girls & women.</h1>
-          <p class=" text-muted mt-2 mb-5">sheCircuits is a nonprofit empowering African girls with robotics, coding, and IoT skills to thrive in the digital future. We support you through mentorship
-             and a strong community of women in tech.</p>
+          <h1 class="h1 fw-extrabold mt-3 mb-4 hero-title">
+            Hands-on robotics for <span class="accent">African</span> girls & women.
+          </h1>
+
+          </h1>
+          <p class=" text-muted mt-2 mb-5">sheCircuits is a nonprofit empowering African girls with robotics, coding,
+            and IoT skills to thrive in the digital future. We support you through mentorship
+            and a strong community of women in tech.</p>
           <div class="d-flex flex-wrap gap-2 mt-3">
-            <a href="#join" class="btn btn-brand btn-pill btn-lg" style="color: #ffffff; font-size: 17px; padding-left: 20px; padding-right: 20px;">Explore Programs</a>
+            <a href="#join" class="btn btn-brand btn-pill btn-lg"
+              style="color: #ffffff; font-size: 17px; padding-left: 20px; padding-right: 20px;">Explore Programs</a>
             <!-- <a href="#programs" class="btn btn-outline-dark btn-pill btn-lg">Explore programs</a> -->
           </div>
         </div>
         <div class="col-lg-6 position-relative">
-          <img src="images/robo_girl-removebg-preview.png" alt="Young woman learning robotics at sheCircuits" loading="lazy" style="margin-left: 50px;" width="400" height="600">
-          <div class="avatar-bubble small fw-semibold"><i class="bi bi-people me-1 text-danger" aria-hidden="true"></i> 5 slots per cohort</div>
+          <img src="images/robo_girl-removebg-preview.png" alt="Young woman learning robotics at sheCircuits"
+            loading="lazy" style="margin-left: 50px;" width="400" height="600">
+          <div class="avatar-bubble small fw-semibold"><i class="bi bi-people me-1 text-danger" aria-hidden="true"></i>
+            5 slots per cohort</div>
         </div>
       </div>
     </div>
   </header>
 
   <!-- QUICK STRIP -->
-  <section class="py-3" style="background:#fff;">
-    <div class="container d-flex flex-wrap gap-3 justify-content-center text-muted small">
-      <span><i class="bi bi-robot text-danger me-1" aria-hidden="true"></i>Robotics</span>
-      <span><i class="bi bi-code-slash text-danger me-1" aria-hidden="true"></i>Coding</span>
-      <span><i class="bi bi-reception-4 text-danger me-1" aria-hidden="true"></i>IoT</span>
-      <span><i class="bi bi-people text-danger me-1" aria-hidden="true"></i>Mentorship</span>
+  <!-- QUICK STRIP (Marquee) -->
+  <section class="ticker" aria-label="the future in feminine scrolling banner">
+    <div class="container-fluid p-0 pt-2">
+      <!-- Duplicate the phrase to create a seamless loop -->
+      <div class="ticker__track" role="marquee" aria-live="off">
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <!-- repeat once more to ensure continuous scroll -->
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+        <span class="ticker__item">the future is feminine <span class="ticker__dot"></span></span>
+      </div>
     </div>
   </section>
+
 
   <!-- WHAT TO EXPECT / IOT -->
   <section id="perks" class="py-5 section-muted">
     <div class="container">
       <p class="fw-bold text-uppercase small mb-1" style="color:var(--sc-pink)">What to expect</p>
       <h2 class="h1 fw-extrabold">Internet of <span class="underline-pink">Things</span> (IoT)</h2>
-      <p>IoT is connecting everyday devices (sensors, machines, home appliances) to the internet so they can collect data, communicate, and work smarter. At sheCircuits, we use IoT to solve real‑world problems in our communities.</p>
+      <p>IoT is connecting everyday devices (sensors, machines, home appliances) to the internet so they can collect
+        data, communicate, and work smarter. At sheCircuits, we use IoT to solve real‑world problems in our communities.
+      </p>
       <div class="row g-4 mt-1">
         <div class="col-md-6 col-lg-3">
           <div class="card p-4 h-100">
@@ -225,22 +472,174 @@
     </div>
   </section>
 
+  <!-- KITS -->
+  <section id="kits" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="h1 fw-extrabold">sheCircuits <span class="underline-pink">Starter Kit</span></h2>
+          <p class="text-muted">Everything you need to start tinkering at home: microcontroller, sensors, LEDs, motors,
+            jumper wires, and a printed guide. Buy a kit or borrow one when you join a cohort.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-brand btn-pill"
+              href="mailto:hello@shecircuits.org?subject=Buy%20a%20sheCircuits%20Starter%20Kit">Buy now via email</a>
+            <a class="btn btn-outline-dark btn-pill" href="#join">Borrow with cohort</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="images/TM.png" class="img-fluid" alt="Starter kit contents" loading="lazy" width="1000" height="700"
+            style="border-radius: 30px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS STRIP -->
+  <section id="programs" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <h2 class="h1 fw-extrabold">Events <span class="underline-pink">and Workshops</span></h2>
+          <p class="text-muted">We organize meetups, workshops and mentorship sessions for ambitious young women in
+            STEM. Be on the lookout.</p>
+        </div>
+        <div class="swiper" aria-label="Event slider">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/launch flyer.png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st Nov 2025</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/school outreach.png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st Dec 2025</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/school outreach (2).png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st Feb 2026</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/school outreach (1).png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st March 2026</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/burnouts.png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st March 2026</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/imposter syndrome.png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st March 2026</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Slide 7 -->
+            <div class="swiper-slide">
+              <div class="card h-100">
+                <img src="images/burnouts (1).png" class="card-img-top" alt="Launch flyer" loading="lazy">
+                <div class="p-4">
+                  <h6 class="fw-bold mb-1">sheCircuits Launch — 1st March 2026</h6>
+                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
+                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
+            <div class="swiper-button-prev" aria-label="Previous" style="color: #fff;"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next" aria-label="Next" style="color: #fff;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- LEARN HOW TO CODE -->
-  <section id="learn" class="py-5" style="background-color: #f7f4f7;">
+  <section id="learn" class="py-5" style="background-color: #f6e9fc;">
     <div class="container">
       <p class="fw-bold text-uppercase small mb-1" style="color:var(--sc-pink)">Start here</p>
       <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
         <h2 class="h1 fw-extrabold mb-0">Learn how to <span class="underline-pink">code</span></h2>
         <span class="badge badge-soft px-3 py-2">Beginner-friendly • Ages 12–23</span>
       </div>
-      <p class="text-muted mt-2">Jumping straight into robotics can be tricky. These friendly beginner courses bring you up to speed. Pick a path and build real projects with mentors—no experience needed.</p>
+      <p class="text-muted mt-2">Jumping straight into robotics can be tricky. These friendly beginner courses bring you
+        up to speed. Pick a path and build real projects with mentors—no experience needed.</p>
 
       <div class="row g-3 mt-3">
-        <div class="col-6 col-lg-3"><div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-calendar-event text-danger" aria-hidden="true"></i><div><strong>3–4 weeks</strong><br><small class="text-muted">Weekly sessions</small></div></div></div>
-        <div class="col-6 col-lg-3"><div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-people text-danger" aria-hidden="true"></i><div><strong>Small cohorts</strong><br><small class="text-muted">Personal mentorship</small></div></div></div>
-        <div class="col-6 col-lg-3"><div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-patch-check text-danger" aria-hidden="true"></i><div><strong>Project‑based</strong><br><small class="text-muted">Build & demo</small></div></div></div>
-        <div class="col-6 col-lg-3"><div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-award text-danger" aria-hidden="true"></i><div><strong>Badges</strong><br><small class="text-muted">Earn certificates</small></div></div></div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-calendar-event text-danger"
+              aria-hidden="true"></i>
+            <div><strong>3–4 weeks</strong><br><small class="text-muted">Weekly sessions</small></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-people text-danger"
+              aria-hidden="true"></i>
+            <div><strong>Small cohorts</strong><br><small class="text-muted">Personal mentorship</small></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-patch-check text-danger"
+              aria-hidden="true"></i>
+            <div><strong>Project‑based</strong><br><small class="text-muted">Build & demo</small></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft p-3 h-100 d-flex align-items-center gap-2"><i class="bi bi-award text-danger"
+              aria-hidden="true"></i>
+            <div><strong>Badges</strong><br><small class="text-muted">Earn certificates</small></div>
+          </div>
+        </div>
       </div>
 
       <div class="row g-4 mt-1">
@@ -288,7 +687,7 @@
             <h5 class="fw-bold mb-1">Intro to AI</h5>
             <p class="text-muted small mb-3">Data basics • ML concepts • ethics</p>
             <ul class="small text-muted mb-4 ps-3">
-              <li>Build a tiny image‑classifier demo</li>
+              <li>Build a tiny image-classifier demo</li>
               <li>Discuss AI for good</li>
             </ul>
             <a href="#join" class="btn btn-outline-dark btn-pill">Start Course</a>
@@ -297,38 +696,12 @@
       </div>
 
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4">
-        <p class="mb-0 text-muted">Not sure where to start? We’ll help you choose the best track for your goals.</p>
-        <a href="#join" class="btn btn-brand btn-pill">I’m in 🎉</a>
+        <p class="mb-0 text-muted">Not sure where to start? We'll help you choose the best track for your goals.</p>
+        <a href="#join" class="btn btn-brand btn-pill">I'm in 🎉</a>
       </div>
     </div>
   </section>
 
-    <!-- PROGRAMS STRIP -->
-  <section id="programs" class="py-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-3">
-          <h2 class="h1 fw-extrabold">Events <span class="underline-pink">and Workshops</span></h2>
-          <p class="text-muted">We organize meetups, workshops and mentorship sessions for ambitious young women in STEM. Be on the lookout.</p>
-        </div>
-        <div class="col-lg-9">
-          <div class="row g-4">
-            <div class="col-12 col-md-6 col-xl-4">
-              <div class="card h-100">
-                <img src="images/launch.png" class="card-img-top" alt="Launch flyer" loading="lazy">
-                <div class="p-4">
-                  <h6 class="fw-bold mb-1">sheCircuits Launch — 11 Oct 2025</h6>
-                  <p class="small text-muted mb-3">Munyonyo, Kampala • Free • Seats limited</p>
-                  <a class="btn btn-outline-dark btn-pill btn-sm" href="#events">Details</a>
-                </div>
-              </div>
-            </div>
-            <!-- Add more program cards as you schedule them -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- HACKATHONS -->
@@ -336,8 +709,15 @@
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
+          <!-- <div class="ratio ratio-16x9"> -->
+          <!-- <iframe title="sheCircuits highlight video" loading="lazy" src="" allowfullscreen></iframe> -->
+          <img src="images/dee_presenting.png" class="img-fluid" style="border-radius: 20px;" alt="">
+          <!-- </div> -->
+        </div>
+        <div class="col-lg-6" style="padding-left: 20px;">
           <h2 class="h1 fw-extrabold">Hackathons & <span class="underline-pink">Build Days</span></h2>
-          <p class="text-muted">Weekend sprints where teams prototype hardware + code solutions—energy, health, safety, agritech and more. Beginners welcome; mentors on‑site.</p>
+          <p class="text-muted">Weekend sprints where teams prototype hardware + code solutions—energy, health, safety,
+            agritech and more. Beginners welcome; mentors on-site.</p>
           <ul class="text-muted">
             <li>Hardware kits provided on the day</li>
             <li>Team formation & mentor matching</li>
@@ -345,11 +725,7 @@
           </ul>
           <a href="#join" class="btn btn-outline-dark btn-pill">Get notified</a>
         </div>
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9">
-            <iframe title="sheCircuits highlight video" loading="lazy" src="" allowfullscreen></iframe>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -359,11 +735,13 @@
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-6 order-lg-2">
-          <img src="images/schools.png" class="img-fluid" alt="School outreach" loading="lazy" width="900" height="600">
+          <img src="images/learners.png" class="img-fluid" alt="School outreach" loading="lazy" width="900" height="600"
+            style="border-radius: 20px;">
         </div>
         <div class="col-lg-6">
           <h2 class="h1 fw-extrabold">For <span class="underline-pink">Schools</span> & Clubs</h2>
-          <p class="text-muted">We run robotics clubs, teacher trainings, and pop‑up workshops. Partner with us for after‑school programs or one‑day STEM festivals.</p>
+          <p class="text-muted">We run robotics clubs, teacher trainings, and pop-up workshops. Partner with us for
+            after-school programs or one-day STEM festivals.</p>
           <ul class="text-muted">
             <li>Curriculum kits & teacher guides</li>
             <li>Loaner laptops and microcontrollers</li>
@@ -375,91 +753,98 @@
     </div>
   </section>
 
-  <!-- EVENTS DETAIL / JOIN CTA -->
-    <!-- EVENTS: Slider with cards -->
-  <section id="events" class="py-5 section-muted">
+
+
+
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5 section-muted">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="display-6 fw-extrabold">Upcoming <span class="underline-pink">Events</span></h2>
-        <p class="text-muted">Workshops, meetups, and build days. Seats are limited—save yours.</p>
+        <h2 class="display-6 fw-extrabold">Frequently Asked <span class="underline-pink">Questions</span></h2>
+        <p class="text-muted">Got questions about sheCircuits? Here are the answers.</p>
       </div>
 
-      <div class="swiper" aria-label="Event slider">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="card h-100 shadow-sm" style="max-width: 380px; margin: 0 auto;">
-              <img src="images/event1.jpg" class="card-img-top" alt="Robotics 101 workshop" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title fw-bold mb-1">Robotics 101 — Girls Only</h5>
-                <p class="small text-muted mb-2"><i class="bi bi-calendar-event me-1 text-danger"></i> Sat, Oct 11 • 10:00 — Munyonyo</p>
-                <p class="card-text text-muted">Hands-on intro with Arduino/ESP32. No experience needed. Hardware provided.</p>
-                <a href="#join" class="btn btn-brand btn-pill btn-sm">Save seat</a>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="card h-100 shadow-sm" style="max-width: 380px; margin: 0 auto;">
-              <img src="images/event2.jpg" class="card-img-top" alt="IoT for Communities meetup" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title fw-bold mb-1">IoT for Communities Meetup</h5>
-                <p class="small text-muted mb-2"><i class="bi bi-calendar-event me-1 text-danger"></i> Sat, Nov 1 • 14:00 — Kampala</p>
-                <p class="card-text text-muted">Lightning talks + mini-build on sensors for clean water, safety, and energy.</p>
-                <a href="#join" class="btn btn-outline-dark btn-pill btn-sm">Get notified</a>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <div class="card h-100 shadow-sm" style="max-width: 380px; margin: 0 auto;">
-              <img src="images/event3.jpg" class="card-img-top" alt="Build Day hackathon" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title fw-bold mb-1">Build Day: HealthTech</h5>
-                <p class="small text-muted mb-2"><i class="bi bi-calendar-event me-1 text-danger"></i> Sun, Nov 23 • 09:00 — Maker Space</p>
-                <p class="card-text text-muted">Form a team, prototype a hardware + code solution, and demo to judges.</p>
-                <a href="#join" class="btn btn-outline-dark btn-pill btn-sm">Join waitlist</a>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="swiper-slide">
-            <div class="card h-100 shadow-sm" style="max-width: 380px; margin: 0 auto;">
-              <img src="images/event4.jpg" class="card-img-top" alt="Teacher training day" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title fw-bold mb-1">Teacher Training Day</h5>
-                <p class="small text-muted mb-2"><i class="bi bi-calendar-event me-1 text-danger"></i> Sat, Dec 6 • 10:00 — School Lab</p>
-                <p class="card-text text-muted">Curriculum kits, facilitation tips, and safety for running school clubs.</p>
-                <a href="#contact" class="btn btn-outline-dark btn-pill btn-sm">Partner with us</a>
-              </div>
+      <div class="accordion" id="faqAccordion">
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#answer1"
+              aria-expanded="true" aria-controls="answer1">
+              Who can join sheCircuits programs?
+            </button>
+          </h2>
+          <div id="answer1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              Our programs are open to girls and young women in Africa, typically ages 12–23.
+              Beginners are welcome—no prior coding or hardware experience is required.
             </div>
           </div>
         </div>
 
-        <!-- Controls -->
-        <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
-          <div class="swiper-button-prev" aria-label="Previous"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next" aria-label="Next"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KITS -->
-  <section id="kits" class="py-5">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-extrabold">sheCircuits <span class="underline-pink">Starter Kit</span></h2>
-          <p class="text-muted">Everything you need to start tinkering at home: microcontroller, sensors, LEDs, motors, jumper wires, and a printed guide. Buy a kit or borrow one when you join a cohort.</p>
-          <div class="d-flex gap-2 flex-wrap">
-            <a class="btn btn-brand btn-pill" href="mailto:hello@shecircuits.org?subject=Buy%20a%20sheCircuits%20Starter%20Kit">Buy now via email</a>
-            <a class="btn btn-outline-dark btn-pill" href="#join">Borrow with cohort</a>
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
+              Do I need to buy the Starter Kit?
+            </button>
+          </h2>
+          <div id="answer2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              You can buy your own Starter Kit to practice at home, or borrow one when you join a cohort.
+              Every participant will have access to hardware during workshops.
+            </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <img src="images/TM.png" class="img-fluid" alt="Starter kit contents" loading="lazy" width="1000" height="700" style="border-radius: 30px;">
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq3">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
+              How much does it cost to join?
+            </button>
+          </h2>
+          <div id="answer3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              We aim to keep costs low and accessible. Some sessions are free, while others may have a small fee.
+              Scholarships are available for those who need support.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq4">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#answer4" aria-expanded="false" aria-controls="answer4">
+              What will I learn at sheCircuits?
+            </button>
+          </h2>
+          <div id="answer4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              You’ll learn robotics, coding (Arduino, Python, web), and IoT.
+              Programs are project-based, so you’ll build real solutions and demo them with your team.
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq5">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#answer5" aria-expanded="false" aria-controls="answer5">
+              How can I get involved as a mentor or partner?
+            </button>
+          </h2>
+          <div id="answer5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">
+              We’d love your support! Mentors, volunteers, and partner schools are welcome.
+              Please <a href="#contact">contact us</a> to discuss how you can contribute.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -470,66 +855,69 @@
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
-          <h2 class="display-6 fw-extrabold">Ready to join <span class="underline-pink">Cohort 1</span>?</h2>
-          <p class="lead text-muted">Applications are open. We keep class sizes small (~10 seats) to ensure personal mentorship.</p>
+          <h2 class="display-6 fw-extrabold">Contact <span class="underline-pink">Us</span></h2>
+          <p class="lead text-muted">Questions, partnerships, or press? We'd love to hear from you.</p>
+
+
           <form class="row g-2" id="applyForm" autocomplete="on">
             <div class="col-sm-8">
               <label class="visually-hidden" for="email">Email</label>
-              <input id="email" name="email" type="email" required class="form-control form-control-lg rounded-pill" placeholder="Your email" />
+              <input id="email" name="email" type="email" required class="form-control form-control-lg rounded-pill"
+                placeholder="Your email" />
             </div>
             <div class="col-sm-4 d-grid">
               <button class="btn btn-brand btn-lg btn-pill" type="submit">Apply / Subscribe</button>
             </div>
           </form>
-          <small class="text-muted d-block mt-2">We’ll send scholarship info and cohort dates.</small>
+          <small class="text-muted d-block mt-2">We'll send scholarship info and cohort dates.</small>
         </div>
         <div class="col-lg-5">
           <div class="card-soft p-4">
-            <div class="d-flex align-items-center mb-2"><i class="bi bi-calendar-event me-2 text-danger" aria-hidden="true"></i><strong>Next start:</strong>&nbsp; Oct 14</div>
-            <div class="d-flex align-items-center mb-2"><i class="bi bi-geo-alt me-2 text-danger" aria-hidden="true"></i><strong>Location:</strong>&nbsp; Kampala (loaner laptops)</div>
-            <div class="d-flex align-items-center"><i class="bi bi-award me-2 text-danger" aria-hidden="true"></i><strong>Age:</strong>&nbsp; 12–18 • Beginner‑friendly</div>
+            <ul class="list-unstyled text-muted">
+              <li class="mb-2"><i class="bi bi-envelope me-2 text-danger" aria-hidden="true"></i><a
+                  class="text-decoration-none" href="mailto:hello@shecircuits.org">hello@shecircuits.org</a></li>
+              <li class="mb-2"><i class="bi bi-geo-alt me-2 text-danger" aria-hidden="true"></i> Kampala, Uganda</li>
+              <li class="mb-2"><i class="bi bi-clock me-2 text-danger" aria-hidden="true"></i> Mon-Sat, 9:00-18:00 EAT
+              </li>
+            </ul>
+
+            <div class="ratio ratio-16x9">
+              <iframe title="Map to Munyonyo" loading="lazy"
+                src="https://www.google.com/maps?q=Munyonyo,+Kampala&output=embed" width="100%" height="400"
+                style="border:0;" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-5" style="background:#fff;">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-extrabold">Contact <span class="underline-pink">Us</span></h2>
-          <p class="text-muted">Questions, partnerships, or press? We’d love to hear from you.</p>
-          <ul class="list-unstyled text-muted">
-            <li class="mb-2"><i class="bi bi-envelope me-2 text-danger" aria-hidden="true"></i><a class="text-decoration-none" href="mailto:hello@shecircuits.org">hello@shecircuits.org</a></li>
-            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-danger" aria-hidden="true"></i> Kampala, Uganda</li>
-            <li class="mb-2"><i class="bi bi-clock me-2 text-danger" aria-hidden="true"></i> Mon–Sat, 9:00–18:00 EAT</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9">
-            <iframe title="Map to Kampala" loading="lazy" src="https://www.google.com/maps?q=Kampala,+Uganda&output=embed"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
 
   <!-- FOOTER -->
   <footer class="footer py-4">
     <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
-      <div class="d-flex align-items-center gap-2"><span class="brand"><span class="dot" aria-hidden="true"></span><span class="name">she<span style="color:var(--sc-pink)">Circuits</span></span></span><small class="text-muted">© <span id="year"></span> All rights reserved.</small></div>
+      <div class="d-flex align-items-center gap-2"><span class="brand"><span class="dot" aria-hidden="true"></span><span
+            class="name">she<span style="color:var(--sc-pink)">Circuits</span></span></span><small class="text-muted">©
+          <span id="year"></span> All rights reserved.</small></div>
       <div class="d-flex gap-3 fs-5">
-        <a class="text-decoration-none text-dark" href="https://www.instagram.com/shecircuits" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-        <a class="text-decoration-none text-dark" href="https://x.com/intent/follow?screen_name=shecircuits" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a class="text-decoration-none text-dark" href="https://www.linkedin.com/company/shecircuits/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-        <a class="text-decoration-none text-dark" href="mailto:hello@shecircuits.org" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+        <a class="text-decoration-none text-dark" href="https://www.instagram.com/shecircuits" aria-label="Instagram"
+          target="_blank" rel="noopener"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+        <a class="text-decoration-none text-dark" href="https://x.com/intent/follow?screen_name=shecircuits"
+          aria-label="X / Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+        <a class="text-decoration-none text-dark" href="https://www.linkedin.com/company/shecircuits/"
+          aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a class="text-decoration-none text-dark" href="mailto:hello@shecircuits.org" aria-label="Email"><i
+            class="bi bi-envelope" aria-hidden="true"></i></a>
       </div>
     </div>
   </footer>
 
-  <button id="toTop" class="btn btn-dark btn-pill position-fixed" style="right:1rem; bottom:1rem; display:none;" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></button>
+  <button id="toTop" class="btn btn-dark btn-pill position-fixed" style="right:1rem; bottom:1rem; display:none;"
+    aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Slider script (SwiperJS) -->
@@ -553,41 +941,41 @@
   </script>
   <script>
     // Smooth scroll & collapse on nav click
-    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
-      const id=a.getAttribute('href');
-      if(id.length>1){
-        const el=document.querySelector(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
-        const menu=document.getElementById('navMenu');
-        if(menu.classList.contains('show')) new bootstrap.Collapse(menu).hide();
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        const menu = document.getElementById('navMenu');
+        if (menu.classList.contains('show')) new bootstrap.Collapse(menu).hide();
       }
     }));
 
     // Active link highlight on scroll
-    const sections=[...document.querySelectorAll('section[id], header[id]')];
-    const navLinks=[...document.querySelectorAll('.nav-link')];
-    const spy=()=>{
-      let current='';
-      const y=window.scrollY+120;
-      sections.forEach(sec=>{ if(y>=sec.offsetTop && y<sec.offsetTop+sec.offsetHeight){ current=sec.id; }});
-      navLinks.forEach(l=>{ l.classList.toggle('active', l.getAttribute('href')==='#'+current); });
+    const sections = [...document.querySelectorAll('section[id], header[id]')];
+    const navLinks = [...document.querySelectorAll('.nav-link')];
+    const spy = () => {
+      let current = '';
+      const y = window.scrollY + 120;
+      sections.forEach(sec => { if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) { current = sec.id; } });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
     };
     window.addEventListener('scroll', spy); spy();
 
     // Back to top button
-    const toTop=document.getElementById('toTop');
-    window.addEventListener('scroll',()=>{ toTop.style.display = window.scrollY>600 ? 'block':'none'; });
-    toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => { toTop.style.display = window.scrollY > 600 ? 'block' : 'none'; });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
     // Simple apply handler -> opens a prefilled email (no backend needed)
-    const form=document.getElementById('applyForm');
-    form.addEventListener('submit', e=>{
+    const form = document.getElementById('applyForm');
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      const email=document.getElementById('email').value.trim();
-      if(email){
-        const subject=encodeURIComponent('Cohort 1 application / newsletter signup');
-        const body=encodeURIComponent(`Hi sheCircuits,\n\nPlease add me to Cohort 1 updates.\n\nMy email: ${email}\n`);
-        window.location.href=`mailto:hello@shecircuits.org?subject=${subject}&body=${body}`;
+      const email = document.getElementById('email').value.trim();
+      if (email) {
+        const subject = encodeURIComponent('Cohort 1 application / newsletter signup');
+        const body = encodeURIComponent(`Hi sheCircuits,\n\nPlease add me to Cohort 1 updates.\n\nMy email: ${email}\n`);
+        window.location.href = `mailto:hello@shecircuits.org?subject=${subject}&body=${body}`;
         form.reset();
       }
     });
@@ -596,4 +984,5 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>

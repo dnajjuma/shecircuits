@@ -1,0 +1,29 @@
+[
+  {
+    "title": "HTML, CSS, and Javascript for Web Developers",
+    "provider": "Johns Hopkins University (Coursera)",
+    "level": "Beginner",
+    "length": "4–6 weeks",
+    "price": "Free to audit",
+    "url": "https://www.coursera.org/learn/html-css-javascript-for-web-developers",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Web Design for Everybody",
+    "provider": "University of Michigan (Coursera)",
+    "level": "Beginner",
+    "length": "5 courses (specialization)",
+    "price": "Free to audit",
+    "url": "https://www.coursera.org/specializations/web-design",
+    "tags": ["HTML", "CSS", "Accessibility"]
+  },
+  {
+    "title": "Introduction to Front-End Development",
+    "provider": "Meta (Coursera)",
+    "level": "Beginner",
+    "length": "4 weeks",
+    "price": "Free to audit",
+    "url": "https://www.coursera.org/learn/introduction-to-front-end-development",
+    "tags": ["Frontend", "Career"]
+  }
+]

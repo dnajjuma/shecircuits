@@ -344,12 +344,216 @@
       background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
     }
 
+    /* === Founder Timeline (Cohorts-style) === */
+    .founder-timeline {
+      --line: #f9e29b;
+      --dot: #ffb000;
+      --year: #ffcc29;
+      --bubble: #fff;
+    }
+
+    .ft-wrap {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .ft-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-left: 3px dotted var(--line);
+      transform: translateX(-1.5px);
+    }
+
+    .ft-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 34px 0;
+    }
+
+    .ft-dot {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 18px;
+      height: 18px;
+      background: var(--dot);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 10px 22px -10px rgba(0, 0, 0, .35);
+    }
+
+    .ft-year {
+      display: inline-block;
+      background: var(--year);
+      color: #161616;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: .25rem .7rem;
+      font-size: .95rem;
+      box-shadow: 0 12px 26px -12px rgba(255, 204, 41, .9);
+    }
+
+    .ft-bubble {
+      background: var(--bubble);
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 16px;
+      padding: 12px 14px;
+      box-shadow: 0 18px 40px -24px rgba(0, 0, 0, .25);
+    }
+
+    .ft-bubble p {
+      margin: 0;
+      color: #5a5960;
+    }
+
+    .ft-left {
+      grid-column: 1/2;
+      text-align: right;
+      padding-right: 42px;
+    }
+
+    .ft-right {
+      grid-column: 2/3;
+      text-align: left;
+      padding-left: 42px;
+    }
+
+    .ft-left .ft-bubble {
+      display: inline-block;
+      max-width: 360px;
+    }
+
+    .ft-right .ft-bubble {
+      display: inline-block;
+      max-width: 360px;
+    }
+
+    /* ---- Global card background ---- */
+:root { --sc-card: #faf5e9; }
+
+.card,
+.card-soft,
+.swiper .card,
+#perks .card,
+#programs .card,
+#kits .card,
+#learn .card,
+#hackathons .card,
+#schools .card {
+  background: var(--sc-card) !important;
+  border-color: rgba(0,0,0,.06);
+  box-shadow: 0 10px 24px -18px rgba(0,0,0,.25);
+}
+
+/* keep card header/footer transparent if you use them later */
+.card-header,
+.card-footer { background: transparent; }
+
+/* images in cards should remain normal */
+.card-img-top,
+.card img { background: transparent; }
+
+
+    @media (max-width: 991.98px) {
+      .ft-item {
+        grid-template-columns: 1fr;
+      }
+
+      .ft-left,
+      .ft-right {
+        text-align: left;
+        padding: 0 0 0 42px;
+      }
+
+      .ft-line {
+        left: 22px;
+        transform: none;
+        border-left-width: 3px;
+      }
+
+      .ft-dot {
+        left: 22px;
+        transform: translateX(-50%);
+      }
+    }
+
+
+
 
     @media (min-width: 992px) {
       .hero-min {
         min-height: 74vh;
       }
+
     }
+
+    /* === Mobile responsiveness patch === */
+
+/* Make all images scale down */
+img,
+.video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HERO: stop fixed margins/heights from pushing off-screen on phones */
+@media (max-width: 575.98px) {
+  .hero .row { gap: 1.5rem !important; }
+  .hero .col-lg-6 { text-align: center; }             /* center text on phones */
+  .hero img { margin: 0 auto !important; width: 100%; max-width: 440px; }
+  .avatar-bubble { position: static; display: inline-block; margin-top: .75rem; }
+}
+
+/* Navbar toggler icon visibility on light bg */
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler-icon {
+  filter: invert(0.8); /* makes the default icon visible on light bg */
+}
+
+/* Give content a tiny offset below sticky navbar on very small screens */
+@media (max-width: 575.98px) {
+  header.hero { padding-top: .5rem; }
+}
+
+/* Cards & grids: remove cramped edges on phones */
+@media (max-width: 575.98px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  .card, .card-soft { border-radius: 14px; }
+}
+
+/* Ticker: reduce height and speed on phones to avoid crowding */
+@media (max-width: 575.98px) {
+  .ticker { --h: 44px; }
+  .ticker__track { gap: 1.5rem; animation-duration: 28s; }
+}
+
+/* Founder section: keep portrait nice and centered */
+#founder img.rounded-circle {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+}
+@media (max-width: 575.98px) {
+  #founder .col-md-8 { padding-left: 0 !important; }
+}
+
+/* IoT perk cards: equal spacing + readable */
+#perks .card img { width: 100%; height: auto; }
+@media (max-width: 575.98px) {
+  #perks .row { row-gap: 1rem !important; }
+}
+
+/* Swiper: ensure slides don’t bleed off the screen on xs */
+.swiper { padding-left: .25rem; padding-right: .25rem; }
+
   </style>
   <!-- Slider styles (SwiperJS) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -386,7 +590,7 @@
         <div class="col-lg-6">
           <span class="badge badge-soft px-3 py-2">Rewire Your Future</span>
           <h1 class="h1 fw-extrabold mt-3 mb-4 hero-title">
-            Hands-on robotics for <span class="accent">African</span> girls & women.
+            <b>Hands-on robotics for <span class="accent">African</span> girls & women.</b> 
           </h1>
 
           </h1>
@@ -400,8 +604,9 @@
           </div>
         </div>
         <div class="col-lg-6 position-relative">
-          <img src="images/robo_girl-removebg-preview.png" alt="Young woman learning robotics at sheCircuits"
-            loading="lazy" style="margin-left: 50px;" width="400" height="600">
+          <img src="images/solderingg.png" alt="Young woman learning robotics at sheCircuits"
+  loading="lazy" class="img-fluid" style="border-radius: 20px;">
+
           <div class="avatar-bubble small fw-semibold"><i class="bi bi-people me-1 text-danger" aria-hidden="true"></i>
             5 slots per cohort</div>
         </div>
@@ -449,7 +654,7 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="card p-4 h-100">
-            <img src="images/coding.png" class="img-fluid" alt="Coding lesson" loading="lazy"> <br>
+            <img src="images/founder (1).png" class="img-fluid" alt="Coding lesson" loading="lazy"> <br>
             <h5 class="fw-bold">Programming</h5>
             <p class="text-muted mb-0">Arduino • Web • AI</p>
           </div>
@@ -463,7 +668,7 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="card p-4 h-100">
-            <img src="images/teams.png" class="img-fluid" alt="Team demo day" loading="lazy"> <br>
+            <img src="images/founder (2).png" class="img-fluid" alt="Team demo day" loading="lazy"> <br>
             <h5 class="fw-bold">Teams & Demo Day</h5>
             <p class="text-muted mb-0">Showcase your work • Join the community</p>
           </div>
@@ -711,7 +916,8 @@
         <div class="col-lg-6">
           <!-- <div class="ratio ratio-16x9"> -->
           <!-- <iframe title="sheCircuits highlight video" loading="lazy" src="" allowfullscreen></iframe> -->
-          <img src="images/dee_presenting.png" class="img-fluid" style="border-radius: 20px;" alt="">
+          <img src="images/WhatsApp Image 2025-09-04 at 19.02.10.jpeg" class="img-fluid" style="border-radius: 20px;"
+            alt="">
           <!-- </div> -->
         </div>
         <div class="col-lg-6" style="padding-left: 20px;">
@@ -753,7 +959,56 @@
     </div>
   </section>
 
+  <!-- FOUNDER SECTION -->
+  <section id="founder" class="py-5" style="margin-top: 50px;">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Founder photo -->
+        <div class="col-md-4 text-center">
+          <img src="images/founder (3).png" class="rounded-circle shadow-lg mb-3" alt="Founder of sheCircuits"
+            width="260" height="260">
+          <h3 class="fw-bold mb-0">Founder</h3>
+          <p class="text-muted small">sheCircuits</p>
+          <div class="d-flex justify-content-center gap-3 fs-4">
+            <a href="https://www.linkedin.com/in/diana-najjuma-183435189/" target="_blank" class="text-dark"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="mailto:diananajjuma92@gmail.com" class="text-dark"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
 
+        <!-- Founder story -->
+        <div class="col-md-8" style="padding-left: 20px;">
+          <div class="container">
+            <h1 style="padding-bottom: 30px;"> Message from the <span class="underline-pink">Founder</span> </h1>
+          <div class="card" style="padding: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(236, 91, 188, 0.1); background-color: #fefbf5;">
+
+            <p>
+              At she<span style="color: #b3069c;">Circuits</span> , we believe that every girl deserves the chance to
+              explore, create,
+              and innovate with technology.
+              When I started this journey, my vision was simple; to open doors for young women to see themselves not
+              just
+              as users of technology,
+              but as builders, inventors, and leaders in it.
+              Our programs are more than just skills; they are tools that empower us to solve real problems in our
+              communities and shape the future we want to see.
+            </p>
+
+            <p>
+              Through she<span style="color: #b3069c;">Circuits</span>, I want every participant to know that they belong in tech,
+              that their ideas matter, and that their creativity can light the path for others.
+              Our community is a multiverse designed to rewire possibilities and inspire a new generation of women in
+              STEM.
+            </p>
+
+
+            <h6 style="text-align: right; margin-top: 50px;"> ~ NAJJUMA DIANA</h6>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -866,7 +1121,7 @@
                 placeholder="Your email" />
             </div>
             <div class="col-sm-4 d-grid">
-              <button class="btn btn-brand btn-lg btn-pill" type="submit">Apply / Subscribe</button>
+              <button class="btn btn-brand btn-lg btn-pill" type="submit">Subscribe</button>
             </div>
           </form>
           <small class="text-muted d-block mt-2">We'll send scholarship info and cohort dates.</small>
@@ -874,8 +1129,9 @@
         <div class="col-lg-5">
           <div class="card-soft p-4">
             <ul class="list-unstyled text-muted">
+              <li class="mb-2"><i class="bi bi-phone me-2 text-danger" aria-hidden="true"></i> +256 784 320 381</li>
               <li class="mb-2"><i class="bi bi-envelope me-2 text-danger" aria-hidden="true"></i><a
-                  class="text-decoration-none" href="mailto:hello@shecircuits.org">hello@shecircuits.org</a></li>
+                  class="text-decoration-none" href="mailto:hello@shecircuits.org">info@shecircuits.org</a></li>
               <li class="mb-2"><i class="bi bi-geo-alt me-2 text-danger" aria-hidden="true"></i> Kampala, Uganda</li>
               <li class="mb-2"><i class="bi bi-clock me-2 text-danger" aria-hidden="true"></i> Mon-Sat, 9:00-18:00 EAT
               </li>
@@ -983,6 +1239,22 @@
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Najjuma Diana",
+  "jobTitle":"Founder",
+  "affiliation":{"@type":"Organization","name":"sheCircuits"},
+  "image":"https://shecircuits.org/images/founder.jpg",
+  "sameAs":[
+    "https://www.linkedin.com/in/diana-najjuma-183435189/",
+    "https://x.com/diana_najjuma"
+  ],
+  "description":"Founder of sheCircuits, empowering African girls through robotics, coding and IoT."
+}
+</script>
+
 </body>
 
 </html>
